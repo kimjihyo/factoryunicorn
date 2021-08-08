@@ -14,7 +14,7 @@ type Product = {
 const App: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
-      const data: Product[] = await getProducts();
+      const data: Product[] | null = await getProducts();
       if (data) {
         const filtered = data.filter((item) => {
           const { width, length } = item.figure;
