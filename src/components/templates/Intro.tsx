@@ -82,6 +82,7 @@ const Contents = styled.div`
 
 const CarouselItem = styled.div`
   background-color: white;
+  border-radius: 10px;
 `;
 
 const Intro: React.FC = () => {
@@ -104,7 +105,6 @@ const Intro: React.FC = () => {
       return (
         <CarouselItem
           style={{
-            borderRadius: "10px",
             width: `${itemSize.width}px`,
             height: `${itemSize.height}px`,
             backgroundColor: color,
@@ -154,7 +154,12 @@ const Intro: React.FC = () => {
             <Carousel
               itemHeight={itemSize.height}
               itemWidth={itemSize.width}
-              items={[renderCarouselItem("red"), renderCarouselItem("blue")]}
+              items={[
+                renderCarouselItem("red"),
+                renderCarouselItem("blue"),
+                renderCarouselItem("green"),
+                renderCarouselItem("cyan"),
+              ]}
             />
           </div>
         )}
